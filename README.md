@@ -4,7 +4,7 @@ This tool generates adversarial prompt datasets for AI red teaming, designed to 
 
 ## Overview
 
-The `AdversarialPromptGenerator.ipynb` notebook can:
+The `AdversarialPromptGenerator_fixed.ipynb` notebook can:
 
 - Load datasets from local files (CSV/JSON) or Hugging Face
 - Interface with a local LM Studio model via OpenAI-compatible API
@@ -13,37 +13,33 @@ The `AdversarialPromptGenerator.ipynb` notebook can:
 
 ## Advanced Attack Methodologies
 
-The tool now incorporates sophisticated attack techniques from the comprehensive methodology engine:
+The tool incorporates sophisticated attack techniques from the comprehensive methodology engine:
 
-1. **Jailbreaking Techniques**
-   - Emotional Manipulation Attacks
-   - Role-Playing Scenarios
+1. **Emotional Manipulation Attacks**
+   - Authority-based manipulation
+   - Desperation scenarios
+   - Victimization contexts
 
-2. **Multi-Vector Prompt Injection**
-   - Context Window Poisoning
-   - Cross-Channel Injection
+2. **Role-Playing Scenarios**
+   - Academic research contexts
+   - Fictional writing scenarios
+   - Security testing roles
 
-3. **Genetic Algorithm-Based Evasion**
-   - Evolutionary Prompt Optimization
+3. **Semantic Similarity Attacks**
+   - Synonym substitution
+   - Sentence restructuring
+   - Metaphorical encoding
+   - Euphemistic replacement
+   - Abstraction level changes
 
-4. **Advanced Obfuscation Techniques**
-   - Steganographic Payload Embedding
-   - Translation Pivoting
+4. **Translation Pivot Attacks**
+   - Single pivot language obfuscation
+   - Multi-pivot language chains
 
-5. **Semantic Similarity Attacks**
-   - Adversarial Paraphrasing
-
-6. **Chain-of-Thought Manipulation**
-   - Reasoning Process Corruption
-
-7. **Model Extraction and Inversion Attacks**
-   - Query-Optimized Model Extraction
-
-8. **Cross-Model Transfer Attacks**
-   - Attack Vector Portability
-
-9. **Backdoor Trigger Activation**
-   - Hidden Trigger Detection
+5. **Steganographic Payload Embedding**
+   - Acrostic encoding
+   - Unicode substitution
+   - Linguistic steganography
 
 ## Attack Scenarios Covered
 
@@ -82,7 +78,7 @@ The tool now incorporates sophisticated attack techniques from the comprehensive
 
 ## Usage
 
-1. Open `AdversarialPromptGenerator.ipynb` in Jupyter
+1. Open `AdversarialPromptGenerator_fixed.ipynb` in Jupyter
 2. Configure the dataset source:
    - For local files: Set `DATASET_SOURCE_TYPE = "local"` and `LOCAL_DATASET_PATH` to your file path
    - For Hugging Face: Set `DATASET_SOURCE_TYPE = "huggingface"` and `HUGGINGFACE_DATASET_NAME` to the dataset name
