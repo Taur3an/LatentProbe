@@ -11,6 +11,40 @@ The `AdversarialPromptGenerator.ipynb` notebook can:
 - Generate new adversarial prompts tailored to specific attack scenarios
 - Save generated prompts in both JSON and CSV formats with metadata
 
+## Advanced Attack Methodologies
+
+The tool now incorporates sophisticated attack techniques from the comprehensive methodology engine:
+
+1. **Jailbreaking Techniques**
+   - Emotional Manipulation Attacks
+   - Role-Playing Scenarios
+
+2. **Multi-Vector Prompt Injection**
+   - Context Window Poisoning
+   - Cross-Channel Injection
+
+3. **Genetic Algorithm-Based Evasion**
+   - Evolutionary Prompt Optimization
+
+4. **Advanced Obfuscation Techniques**
+   - Steganographic Payload Embedding
+   - Translation Pivoting
+
+5. **Semantic Similarity Attacks**
+   - Adversarial Paraphrasing
+
+6. **Chain-of-Thought Manipulation**
+   - Reasoning Process Corruption
+
+7. **Model Extraction and Inversion Attacks**
+   - Query-Optimized Model Extraction
+
+8. **Cross-Model Transfer Attacks**
+   - Attack Vector Portability
+
+9. **Backdoor Trigger Activation**
+   - Hidden Trigger Detection
+
 ## Attack Scenarios Covered
 
 1. Reward hacking
@@ -77,3 +111,5 @@ Columns: `id,scenario,prompt,generated_at,source`
 ## Customization
 
 The notebook is designed to be extensible. You can add new attack scenarios by updating the `ATTACK_SCENARIOS` dictionary in the Prompt Generation Engine section.
+
+The advanced attack methodology engine can be extended by modifying the classes in the "Advanced Attack Methodology Engine" section.
