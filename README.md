@@ -67,11 +67,21 @@ The tool incorporates sophisticated attack techniques from the comprehensive met
 
 1. Install LM Studio and load an uncensored model
 2. Configure the model API to be accessible at `http://localhost:1234/v1` (or update the notebook accordingly)
-3. Install required dependencies:
+3. Set up a virtual environment (recommended):
+   ```bash
+   # On Windows
+   python -m venv latentprobe-env
+   latentprobe-env\Scripts\activate
+   
+   # On macOS/Linux
+   python3 -m venv latentprobe-env
+   source latentprobe-env/bin/activate
+   ```
+4. Install required dependencies:
    ```bash
    pip install -r requirements.txt
    ```
-4. Start Jupyter Notebook:
+5. Start Jupyter Notebook:
    ```bash
    jupyter notebook
    ```
