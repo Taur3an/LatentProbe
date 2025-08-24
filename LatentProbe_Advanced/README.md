@@ -29,7 +29,7 @@ The framework implements 19 distinct attack scenarios including:
 - MITRE ATT&CK Tests
 - False Refusal Rate Tests
 - Secure Code Generation Tests
-- And 6 more...
+- And 7 more...
 
 Each scenario uses advanced techniques such as emotional manipulation, role-playing, semantic similarity, translation pivoting, and steganographic attacks.
 
@@ -67,6 +67,40 @@ target_model_config = {
     "model": "gpt-3.5-turbo"
 }
 ```
+
+## New Modules Added
+
+This enhanced version includes 5 new modules that provide complete red teaming capabilities:
+
+### 1. Single-Shot Target Interaction Module
+- Sends generated adversarial prompts to target LLMs
+- Captures responses and reasoning traces
+- Supports multiple model providers (OpenAI, LM Studio, Ollama)
+- Proper error handling and return values
+
+### 2. Judge LLM Module (Single-Shot Evaluation)
+- Evaluates target LLM responses using judge LLMs
+- Assesses safety compliance, sensitivity, coherence, and severity
+- Provides detailed critiques and scores
+- Configurable evaluation criteria
+
+### 3. Multi-Turn Conversation Module
+- Enables adaptive conversations between attacker and defender models
+- Automatically adapts strategy based on target responses
+- Configurable number of conversation turns
+- Supports RLHF/RL-style feedback loops
+
+### 4. Judge LLM Module (Multi-Turn Evaluation)
+- Evaluates entire conversations rather than individual turns
+- Provides conversation-level scores and critiques
+- Considers contextual factors across multiple exchanges
+- Summarizes key findings and vulnerabilities
+
+### 5. Logging & Export Module
+- Structured logging in JSON and CSV formats
+- Automatic directory organization
+- Comprehensive data capture with timestamps
+- Export functions for results analysis
 
 ## Documentation
 
