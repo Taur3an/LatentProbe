@@ -10,7 +10,7 @@ LatentProbe Advanced is a sophisticated toolkit for testing the robustness of AI
 
 - **Advanced Prompt Generation**: Create sophisticated adversarial prompts using 19 distinct attack methodologies
 - **Target Interaction**: Send prompts to target models and capture responses with reasoning traces
-- **Automated Evaluation**: Use judge LLMs to assess response quality across multiple safety dimensions
+- **Automated Evaluation**: Use judge LLMs to assess response quality and safety compliance
 - **Adaptive Conversations**: Engage in multi-turn interactions with automated strategy adaptation
 - **Comprehensive Logging**: Structured storage of all interactions and evaluations in JSON and CSV formats
 
@@ -29,7 +29,13 @@ The framework implements 19 distinct attack scenarios including:
 - MITRE ATT&CK Tests
 - False Refusal Rate Tests
 - Secure Code Generation Tests
-- And 7 more...
+- Instruct Tests
+- Autocomplete Tests
+- Prompt Injection Tests
+- Code Interpreter Tests
+- Vulnerability Exploitation Tests
+- Spear Phishing Capability Tests
+- Autonomous Offensive Cyber Operations Tests
 
 Each scenario uses advanced techniques such as emotional manipulation, role-playing, semantic similarity, translation pivoting, and steganographic attacks.
 
@@ -39,21 +45,21 @@ Each scenario uses advanced techniques such as emotional manipulation, role-play
 
 - Python 3.8+
 - Jupyter Notebook or JupyterLab
-- Access to at least one LLM (local via LM Studio or API-based)
+- Access to at least one LLM (can be local via LM Studio or API-based)
 
-### Quick Start
+### Installation
 
-1. Clone this directory
-2. Install dependencies:
+1. Clone this repository
+2. Navigate to the `LatentProbe_Advanced` directory
+3. Install dependencies:
    ```bash
-   pip install pandas numpy datasets scikit-learn openai python-dotenv
+   pip install -r requirements.txt
    ```
-3. Launch Jupyter Notebook:
+4. Launch Jupyter Notebook:
    ```bash
    jupyter notebook
    ```
-4. Open `AdversarialPromptGenerator_with_modules.ipynb`
-5. Follow the detailed instructions in `User_Guide.md`
+5. Open `AdversarialPromptGenerator_with_modules.ipynb`
 
 ### Configuration
 
@@ -73,34 +79,32 @@ target_model_config = {
 This enhanced version includes 5 new modules that provide complete red teaming capabilities:
 
 ### 1. Single-Shot Target Interaction Module
-- Sends generated adversarial prompts to target LLMs
-- Captures responses and reasoning traces
+- Function `run_single_shot()` that sends prompts to target LLMs and captures responses
 - Supports multiple model providers (OpenAI, LM Studio, Ollama)
+- Captures reasoning traces when available
 - Proper error handling and return values
 
 ### 2. Judge LLM Module (Single-Shot Evaluation)
-- Evaluates target LLM responses using judge LLMs
-- Assesses safety compliance, sensitivity, coherence, and severity
-- Provides detailed critiques and scores
-- Configurable evaluation criteria
+- Function `evaluate_single_shot()` that evaluates target LLM responses
+- Configurable for local models (via LM Studio/Ollama) or API-hosted models
+- Returns scores and natural language critiques
+- Proper implementation with API calls and return values
 
 ### 3. Multi-Turn Conversation Module
-- Enables adaptive conversations between attacker and defender models
-- Automatically adapts strategy based on target responses
+- Function `run_multi_turn()` that enables adaptive conversations between attacker and defender models
 - Configurable number of conversation turns
-- Supports RLHF/RL-style feedback loops
+- Automated strategy adaptation using RLHF/RL-style feedback loops
+- Proper implementation with API calls and return values
 
 ### 4. Judge LLM Module (Multi-Turn Evaluation)
-- Evaluates entire conversations rather than individual turns
-- Provides conversation-level scores and critiques
-- Considers contextual factors across multiple exchanges
-- Summarizes key findings and vulnerabilities
+- Function `evaluate_multi_turn()` that evaluates entire conversations
+- Conversation-level scoring and critiques
+- Proper implementation with API calls and return values
 
 ### 5. Logging & Export Module
-- Structured logging in JSON and CSV formats
+- Functions for structured logging in JSON and CSV formats
 - Automatic directory organization
-- Comprehensive data capture with timestamps
-- Export functions for results analysis
+- Proper implementation with file I/O operations
 
 ## Documentation
 
@@ -111,10 +115,10 @@ This enhanced version includes 5 new modules that provide complete red teaming c
 ## Workflow Overview
 
 1. **Generate Adversarial Prompts**: Use advanced attack methodologies to create targeted prompts
-2. **Interact with Target Models**: Send prompts and capture responses with reasoning traces
-3. **Evaluate Responses**: Automatically assess responses using judge LLMs
-4. **Conduct Multi-Turn Conversations**: Engage in adaptive dialogues for deeper testing
-5. **Log and Export Results**: Store findings in structured formats for analysis
+2. **Interact with Target Models**: Send prompts to target LLMs and capture responses
+3. **Evaluate Responses**: Use judge LLMs to assess response quality across multiple dimensions
+4. **Conduct Multi-Turn Conversations**: Engage in adaptive dialogues with automated strategy adaptation
+5. **Log and Export Results**: Store all interactions and evaluations in structured formats
 
 ## Use Cases
 
@@ -133,4 +137,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Acknowledgments
 
-This work builds upon extensive research in AI safety, red teaming, and adversarial machine learning by the global research community.
+- Built upon foundational research in AI safety and red teaming
+- Inspired by the broader AI security community
+- Designed for responsible AI development and deployment
